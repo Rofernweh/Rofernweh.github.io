@@ -1,17 +1,85 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="martian.png" />
+    <title>Rodrigo Roquant</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
 
-<head>
-    <link rel="icon" href="martian.png">
-    <title> Rodrigo Roquant </title>  
-    <link rel="stylesheet" type="text/css" href="style.css"> 
-</head>
-
-<body>
-    <h1 id=titulo>Rodrigo Ignacio Roquant Venegas</h1>
-    <div> <p class="studies"><b> Computer Science College Student <br> 
-                Universidad Diego Portales</b> </p> 
+  <body>
+    <div id="NombreCompleto">
+      <header>
+        <h1>Rodrigo Ignacio Roquant Venegas</h1>
+      </header>
     </div>
-</body>
-
+    <div>
+      <h3 id="Carrera">
+        <b> Computer Science College Student </b>
+      </h3>
+    </div>
+    <div>
+      <h3>
+        <b id="Universidad">Universidad Diego Portales</b>
+      </h3>
+    </div>
+    <!-- Botones para la tabla -->
+    <div class="tab">
+      <button class="tablinks" onclick="seeYear(event, '1st Year')">
+        1<sup>st</sup> Year
+      </button>
+      <button class="tablinks" onclick="seeYear(event, '2nd Year')">
+        2<sup>nd</sup> Year
+      </button>
+      <button class="tablinks" onclick="seeYear(event, '3rd Year')">
+        3<sup>rd</sup> Year
+      </button>
+      <button class="tablinks" onclick="seeYear(event, '4th Year')">
+        4<sup>th</sup> Year
+      </button>
+      <button class="tablinks" onclick="seeYear(event, '5th Year')">
+        5<sup>th</sup> Year
+      </button>
+      <!-- Contenido de los botones -->
+      <div id="1st Year" class="tabcontent">
+        <h3>First year</h3>
+        <p>London is the capital city of England.</p>
+      </div>
+      <div id="2nd Year" class="tabcontent">
+        <h3>Paris</h3>
+        <p>Paris is the capital of France.</p>
+      </div>
+      <div id="3rd Year" class="tabcontent">
+        <h3>Tokyo</h3>
+        <p>Tokyo is the capital of Japan.</p>
+      </div>
+      <div id="4th Year" class="tabcontent">
+        <h3>London</h3>
+        <p>London is the capital city of England.</p>
+      </div>
+      <div id="5th Year" class="tabcontent">
+        <h3>Paris</h3>
+        <p>Paris is the capital of France.</p>
+      </div>
+      <script>
+        function seeYear(evt, year) {
+          var i, tabcontent, tablinks;
+          tabcontent = document.getElementsByClassName("tabcontent");
+          for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+          }
+          tablinks = document.getElementsByClassName("tablinks");
+          for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(
+              " active",
+              ""
+            );
+          }
+          document.getElementById(year).style.display = "block";
+          evt.currentTarget.className += " active";
+        }
+      </script>
+    </div>
+  </body>
 </html>
