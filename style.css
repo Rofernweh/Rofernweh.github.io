@@ -1,17 +1,63 @@
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Roboto+Slab:wght@300&display=swap");
+@import url("https://dev-cats.github.io/code-snippets/JetBrainsMono.css");
+
 body {
-    background-color: #1D1C1A;
-    color: #FFF8DD;
+  background-color: #f7f8f4;
+  color: #1d1c1a;
 }
-#titulo {
-    text-align: center;
-    margin: auto;
+#NombreCompleto {
+  font-family: Roboto Slab;
+  margin: auto;
+  text-align: center;
 }
 
+#Carrera {
+  font-family: Jetbrains Mono;
+  margin: auto;
+  text-align: middle;
+  width: 600px;
+}
 
+#Universidad {
+  font-family: Poppins;
+}
 
-.studies {
-    margin: auto;
-    text-align: middle;
-    width: 600px;
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+/* Css de los botones */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  margin: auto;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+  font-family: Poppins;
+}
+
+/* Cambiar color de los botones al pasar encima */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Hacer que se vea el boton "actual" */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Ponerle estilo al contenido de cada tab */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+  font-family: poppins;
+  font-weight: 400;
 }
