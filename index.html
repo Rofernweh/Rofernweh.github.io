@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,86 +7,96 @@
     <title>Rodrigo Roquant</title>
     <link rel="stylesheet" type="text/css" href="style.css" />
   </head>
-
   <body>
-    <div id="NombreCompleto">
-      <header>
-        <h1>Rodrigo Ignacio Roquant Venegas</h1>
-      </header>
-    </div>
-    <div>
-      <h3 id="Carrera">
-        <b> Computer Science College Student </b>
-      </h3>
-    </div>
-    <div>
-      <h3>
-        <b id="Universidad">Universidad Diego Portales</b>
-      </h3>
-    </div>
-    <!-- Botones para la tabla -->
-    <!-- Editable hasta el primer año-->
-    <div class="tab">
-      <button class="tablinks" onclick="seeYear(event, '1st Year')">
-        1<sup>st</sup> Year
-      </button>
-      <!-- Aquí-->
-      <button class="tablinks" onclick="seeYear(event, '2nd Year')">
-        2<sup>nd</sup> Year
-      </button>
-      <button class="tablinks" onclick="seeYear(event, '3rd Year')">
-        3<sup>rd</sup> Year
-      </button>
-      <button class="tablinks" onclick="seeYear(event, '4th Year')">
-        4<sup>th</sup> Year
-      </button>
-      <button class="tablinks" onclick="seeYear(event, '5th Year')">
-        5<sup>th</sup> Year
-      </button>
-      <!-- Contenido de los botones -->
-      <!-- Editable hasta el primer año-->
-      <div id="1st Year" class="tabcontent">
-        <br /><br />
-        <p>
-          Pokemon Fighting Program.<br />
-          Made with <img src=""
-        </p>
+    <header>
+      <h1 id="name"> Rodrigo Ignacio Roquant Venegas</h1>
+      <h3 id="career">Computer Science College Student</h3>
+      <h3 id="university">Universidad Diego Portales</h3>
+    </header>
+    <section>
+      <div class="tab"> 
+        <button class="tablinks" onclick="opentab(event,'First')">1<sup>st</sup> Semester</button>
+        <button class="tablinks" onclick="opentab(event,'Second')">2<sup>nd</sup> Semester</button>
+        <button class="tablinks" onclick="opentab(event,'Third')">3<sup>rd</sup> Semester</button>
+        <button class="tablinks" onclick="opentab(event,'Fourth')">4<sup>th</sup> Semester</button>
+        <button class="tablinks" onclick="opentab(event,'Fifth')">5<sup>th</sup> Semester</button>
+        <button class="tablinks" onclick="opentab(event,'Sixth')">6<sup>th</sup> Semester</button>
+        <button class="tablinks" onclick="opentab(event,'Seventh')">7<sup>th</sup> Semester</button>
+        <button class="tablinks" onclick="opentab(event,'Eighth')">8<sup>th</sup> Semester</button>
+        <button class="tablinks" onclick="opentab(event,'Ninth')">9<sup>th</sup> Semester</button>
+        <button class="tablinks" onclick="opentab(event,'Tenth')">10<sup>th</sup> Semester </button>
       </div>
-      <!-- Aquí-->
-      <div id="2nd Year" class="tabcontent">
-        <br /><br />
-        <p>Second Year Project.</p>
+      <div id="First" class="tabcontent">
+        <article id="PFA">
+          <h4>Pokemon Fighting App</h4>
+          <div><p id="pfa-d">This program was originally made in c++ but translated into Javascript/React code to make an app. <br>
+            The Pokemon Fighting App uses the PokemonAPI to retrieve Pokemon base health, attack, and defense along with other attributes, <br> then make the pokemon you choose to fight each other (with a sprite animation made with adobe photoshop) and tell you the winner, all damage dealt, received, and turns it takes to finish. <br><br></p></div>
+          <p>Made with <img id="react" src="react.svg"></p>
+        </article>
+        <article id="CSUDP">
+          <h4> College Schedule (UDP)</h4>
+          <div><p id="csudp-d"> I am developing an application to take my subjects at the best possible time, and without sections running into accidentaly overlaping each other.</p></div> <br><br>
+          <p>
+          Made with <img id="react2" src="react.svg"> 
+          </p>
+        </article>
       </div>
-      <div id="3rd Year" class="tabcontent">
-        <br /><br />
-        <p>Third Year Projects.</p>
+      
+      <div id="Second" class="tabcontent">
+        <h4>Coming Projects.</h3>
+        <p>Project Description.</p>
       </div>
-      <div id="4th Year" class="tabcontent">
-        <br /><br />
-        <p>Fourth Year Projects.</p>
+      
+      <div id="Third" class="tabcontent">
+        <article>
+          <h4>Coming Projects</h3>
+          <p>Project Description.</p>
+        </article>
       </div>
-      <div id="5th Year" class="tabcontent">
-        <br /><br />
-        <p>Fifth Year Projects.</p>
+      <div id="Fourth" class="tabcontent">
+        <article>
+          <h4>Coming Projects</h3>
+          <p>Project Description.</p>
+        </article>
       </div>
-      <script>
-        function seeYear(evt, year) {
-          var i, tabcontent, tablinks;
-          tabcontent = document.getElementsByClassName("tabcontent");
-          for (i = 0; i < tabcontent.length; i++) {
-            tabcontent[i].style.display = "none";
-          }
-          tablinks = document.getElementsByClassName("tablinks");
-          for (i = 0; i < tablinks.length; i++) {
-            tablinks[i].className = tablinks[i].className.replace(
-              " active",
-              ""
-            );
-          }
-          document.getElementById(year).style.display = "block";
-          evt.currentTarget.className += " active";
-        }
-      </script>
-    </div>
+      <div id="Fifth" class="tabcontent">
+        <article>
+          <h4>Coming Projects</h3>
+          <p>Project Description.</p>
+        </article>
+      </div>
+      <div id="Sixth" class="tabcontent">
+        <article>
+          <h4>Coming Projects</h3>
+          <p>Project Description.</p>
+        </article>
+      </div>
+      <div id="Seventh" class="tabcontent">
+        <article>
+          <h4>Coming Projects</h3>
+          <p>Project Description.</p>
+        </article>
+      </div>
+      <div id="Eighth" class="tabcontent">
+        <article>
+          <h4>Coming Projects</h3>
+          <p>Project Description.</p>
+        </article>
+      </div>
+      <div id="Ninth" class="tabcontent">
+        <article>
+          <h4>Coming Projects</h3>
+          <p>Project Description.</p>
+        </article>
+      </div>
+      <div id="Tenth" class="tabcontent">
+        <article>
+          <h4>Coming Projects</h3>
+          <p>Project Description.</p>
+        </article>
+      </div>
+      <script type="text/javascript" src="external.js"></script>
+    </section>
+    <section></section>
   </body>
 </html>
